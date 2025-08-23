@@ -238,7 +238,7 @@ class SingleDeviceMuonWithAuxAdam(torch.optim.Optimizer):
                 group["momentum"] = group.get("momentum", 0.95)
                 group["weight_decay"] = group.get("weight_decay", 0)
                 group["ns_steps"] = group.get("ns_steps",5)
-                assert set(group.keys()) == set(["params", "lr", "momentum", "weight_decay", "use_muon"])
+                assert set(group.keys()) == set(["params", "lr", "momentum", "weight_decay", "use_muon","ns_steps"])
             else:
                 # defaults
                 group["lr"] = group.get("lr", 3e-4)
